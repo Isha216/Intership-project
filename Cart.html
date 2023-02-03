@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add to cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <nav>
+    <span class="logo">Cosmic Shop</span>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="nav-icons">
+        <a href="#" class="cart-btn">
+            <i class="material-icons">shopping_cart</i>
+            <span class="cart-count">0</span>
+        </a>
+        <a href="#" class="wishlist-btn">
+            <i class="material-icons">favorite</i>
+            <span class="wishlist-count">0</span>
+        </a>
+    </div>
+</nav>
+ 
+<section class="cart-section">
+    <div class="cart-container">
+        <h2>Cart</h2>
+        <table>
+          <thead>
+            <tr>
+            <th><strong>Product</strong></th>
+            <th><strong>Price</strong></th>
+          </tr>
+          </thead>
+          <tbody id="carttable">
+          </tbody>
+        </table>
+        <hr>
+        <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>$<span id="total">0</span></td>
+            </tr></table>
+
+ </section>
+
+ <section class="product-section">
+    <div class="container">
+        <div class="card">
+            <img src="https://picsum.photos/200/300" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">Card title 1</h5>
+                <p class="card-text">product Description </p>
+                <p class="price"> $50</p> 
+                <div class="card-buttons">
+                    <button class="addtocart">Add to Cart</button>
+                    <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+        <img src="https://picsum.photos/200/300" alt="Card image">
+        <div class="card-body">
+            <h5 class="card-title">Card title 2</h5>
+            <p class="card-text">product Description </p>
+            <p class="price"> $50</p> 
+            <div class="card-buttons">
+                <button class="addtocart">Add to Cart</button>
+                <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
+            </div>
+        </div>
+        </div>
+        <div class="card">
+        <img src="https://picsum.photos/200/300" alt="Card image">
+        <div class="card-body">
+            <h5 class="card-title">Card title 3</h5>
+            <p class="card-text">product Description </p>
+            <p class="price"> $50</p> 
+            <div class="card-buttons">
+                <button class="addtocart">Add to Cart</button>
+                <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
+            </div>
+        </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/200/300" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">Card title 4</h5>
+                <p class="card-text">product Description </p>
+                <p class="price"> $50</p> 
+                <div class="card-buttons">
+                    <button class="addtocart">Add to Cart</button>
+                    <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/200/300" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">Card title 5</h5>
+                <p class="card-text">product Description </p>
+                <p class="price"> $50</p> 
+                <div class="card-buttons">
+                    <button class="addtocart">Add to Cart</button>
+                    <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/200/300" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">Card title 6</h5>
+                <p class="card-text">product Description </p>
+                <p class="price"> $50</p> 
+                <div class="card-buttons">
+                    <button class="addtocart">Add to Cart</button>
+                    <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section> 
+<script  src="Cart.js"></script>  
+</body>
+</html>

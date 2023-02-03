@@ -1,0 +1,145 @@
+/* *{
+  border: 1px solid black;
+} */
+body {
+  
+  justify-content: center;
+  padding-top: 60px;
+}
+
+ 
+ 
+.cart-section{
+  display: flex;
+  justify-content: center;
+  background-color:#E0E4CC;
+  padding: 10px;
+  width: 80vh;
+  margin-bottom: auto;
+  left: 0;
+  right: 0;
+
+}
+.product-section{
+  margin-top: 1em;
+
+}
+.container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100vh;
+  margin: auto ;
+  justify-content: center;
+  
+   
+}
+
+
+  .card {
+    width: 300px;
+    margin:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    display: block;
+
+  }
+  .card-body{
+    text-align: center;
+  }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .cart-container {
+    border:1px solid #E0E4CC;
+    border-radius:5px;
+    margin-top:1em;
+    padding:1em;
+    
+  }
+  table {
+    margin-bottom:1em;
+    border-collapse:collapse;
+  }
+  table td, table th {
+    text-align:left;
+    padding:0.25em 1em;
+    border-bottom:1px solid #E0E4CC;
+  }
+
+  button, input[type="submit"] {
+    border: 1px solid #FA6900;
+    color: #fff;
+    background: #F38630;
+    padding: 0.6em 1em;
+    font-size: 1em;
+    line-height: 1;
+    border-radius: 1.2em;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+button:hover, button:focus, button:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
+  background: #A7DBD8;
+  border-color:#69D2E7;
+  color:#000;
+  cursor: pointer;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-right: 20px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.nav-icons a {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-icons .cart-count,
+.nav-icons .wishlist-count {
+  margin-left: 5px;
+  color: #fff;
+}
