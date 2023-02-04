@@ -1,71 +1,42 @@
-/* *{
+ *{
   border: 1px solid black;
-} */
+}
 body {
   
   justify-content: center;
   padding-top: 60px;
 }
 
- 
- 
-.cart-section{
-  display: flex;
-  justify-content: center;
-  background-color:#E0E4CC;
-  padding: 10px;
-  width: 80vh;
-  margin-bottom: auto;
-  left: 0;
-  right: 0;
-
-}
-.product-section{
-  margin-top: 1em;
-
-}
-.container {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  width: 100vh;
-  margin: auto ;
-  justify-content: center;
-  
+h2{
+  text-align: center;
    
+} 
+ 
+.cart-section{  
+  justify-content: center;   
+  padding: 10px;
+  width: 100vh;
+  margin-inline: auto;
+  
 }
-
-
-  .card {
-    width: 300px;
-    margin:auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 30px;
-    display: block;
-
-  }
-  .card-body{
-    text-align: center;
-  }
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .cart-container {
+.cart-container {
     border:1px solid #E0E4CC;
     border-radius:5px;
     margin-top:1em;
     padding:1em;
-    
+   
   }
+
+  hr {
+    border:none;
+    background:#30360e;
+    height:1px;
+  }
+
   table {
     margin-bottom:1em;
     border-collapse:collapse;
+    margin-inline: auto;
   }
   table td, table th {
     text-align:left;
@@ -89,8 +60,43 @@ button:hover, button:focus, button:active, input[type="submit"]:hover, input[typ
   color:#000;
   cursor: pointer;
 }
+.product-section{
+  margin-top: 1em;
+
+}
+.container {
+  display: flex;
+  margin: auto;
+  margin-top: 60px;
+  position: static;
+  flex-wrap: wrap;
+  width: 120vh;
+  justify-content: center;
+  
+   
+}
 
 
+  .card {
+    width: 300px;
+    margin:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);    
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    display: block;
+
+  }
+  .card-body{
+    text-align: center;
+  }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+   
 nav {
   display: flex;
   align-items: center;
@@ -142,4 +148,8 @@ nav {
 .nav-icons .wishlist-count {
   margin-left: 5px;
   color: #fff;
+}
+
+table td:nth-last-child(1) {
+  text-align:right;
 }
