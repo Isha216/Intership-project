@@ -31,29 +31,32 @@
 </nav>
  
 <section class="cart-section">
+    <h2>Cart</h2>
+    <hr>
     <div class="cart-container">
-        <h2>Cart</h2>
-        <table>
+        
+        <table id="producttotals">
           <thead>
             <tr>
             <th><strong>Product</strong></th>
-            <th><strong>Price</strong></th>
-          </tr>
+            <th><strong>Quanttity</strong></th>
+            <th><strong>Price</strong></th>                
+          </tr>          
+          
           </thead>
           <tbody id="carttable">
-          </tbody>
-        </table>
-        <hr>
-        <table id="carttotals">
+            </tbody>
             <tr>
-              <td><strong>Items</strong></td>
-              <td><strong>Total</strong></td>
+                <td><strong>Items</strong></td>
+               <td><strong>Total of items</strong></td> 
             </tr>
             <tr>
-              <td>x <span id="itemsquantity">0</span></td>
-             
-              <td>$<span id="total">0</span></td>
-            </tr></table>
+                <td>x <span id="itemsquantity">0</span></td>               
+                <td>$<span id="total">0</span></td>
+              </tr>
+        </table>
+       
+         
 
  </section>
 
@@ -66,7 +69,7 @@
                 <p class="card-text">product Description </p>
                 <p class="price"> $50</p> 
                 <div class="card-buttons">
-                    <button class="addtocart">Add to Cart</button>
+                    <button  id="addtocart-1" class="addtocart">Add to Cart</button>
                     <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
                 </div>
             </div>
@@ -76,9 +79,9 @@
         <div class="card-body">
             <h5 class="card-title">Card title 2</h5>
             <p class="card-text">product Description </p>
-            <p class="price"> $50</p> 
+            <p class="price"> $23</p> 
             <div class="card-buttons">
-                <button class="addtocart">Add to Cart</button>
+                <button  id="addtocart-1" class="addtocart">Add to Cart</button>
                 <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
             </div>
         </div>
@@ -88,9 +91,9 @@
         <div class="card-body">
             <h5 class="card-title">Card title 3</h5>
             <p class="card-text">product Description </p>
-            <p class="price"> $50</p> 
+            <p class="price"> $10</p> 
             <div class="card-buttons">
-                <button class="addtocart">Add to Cart</button>
+                <button  id="addtocart-1" class="addtocart">Add to Cart</button>
                 <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
             </div>
         </div>
@@ -102,7 +105,7 @@
                 <p class="card-text">product Description </p>
                 <p class="price"> $50</p> 
                 <div class="card-buttons">
-                    <button class="addtocart">Add to Cart</button>
+                    <button  id="addtocart-1" class="addtocart">Add to Cart</button>
                     <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
                 </div>
             </div>
@@ -112,9 +115,9 @@
             <div class="card-body">
                 <h5 class="card-title">Card title 5</h5>
                 <p class="card-text">product Description </p>
-                <p class="price"> $50</p> 
+                <p class="price"> $100</p> 
                 <div class="card-buttons">
-                    <button class="addtocart">Add to Cart</button>
+                    <button  id="addtocart-1" class="addtocart">Add to Cart</button>
                     <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
                 </div>
             </div>
@@ -124,15 +127,15 @@
             <div class="card-body">
                 <h5 class="card-title">Card title 6</h5>
                 <p class="card-text">product Description </p>
-                <p class="price"> $50</p> 
+                <p class="price"> $70</p> 
                 <div class="card-buttons">
-                    <button class="addtocart">Add to Cart</button>
+                    <button id="addtocart-1" class="addtocart">Add to Cart</button>
                     <button class="btn btn-wishlist">Wishlist <i class="material-icons">favorite</i></button>
                 </div>
             </div>
         </div>
     </div> 
 </section> 
-<script  src="Cart.js"></script>  
+<script  src="Cart2.js"></script>  
 </body>
 </html>
