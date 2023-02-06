@@ -191,5 +191,40 @@ function addItemToCart(title, price, image) {
   }
 }
  
+function updateCartCount() {
+  const itemsQuantity = document.querySelector('.itemsquantity');
+  const total = document.querySelector('.total');
+  const rows = carttable.querySelectorAll('tr');
+  
+  let producttotal = 0;
+  let quantity = 0;
+  for (const row of rows) {
+  quantity += parseInt(row.querySelector('.quantity-input').value);
+  producttotal += parseFloat(row.querySelector('.price').textContent);
+  }
+  itemsQuantity.textContent = quantity;
+  total.textContent = producttotal.toFixed(2);
+}
 
+const products = document.querySelectorAll(".card");  
+const searchInput = document.querySelector("input[type='text']");  
+
+searchInput.addEventListener("input", function() { 
+  const searchValue = searchInput.value.toLowerCase(); 
+
+  products.forEach(product => {  
+    const productName = product.querySelector(".card-title").textContent.toLowerCase();  
+
+    if (productName.includes(searchValue)) {  
+      product.style.display = "block";  
+    } else {
+      product.style.display = "none";  
+    }
+  });
+});
+
+
+
+//prebuilt search bar services for e-commerce site
+//cache 
 
