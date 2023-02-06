@@ -1,4 +1,4 @@
- /* *{
+/* *{
   border: 1px solid black;
 } */
 body {
@@ -13,22 +13,29 @@ h2{
 
 .search{
   position: relative;
-  box-shadow: 0 0 40px rgba(51, 51, 51, .1);    
+  box-shadow: 0 0 40px rgba(53, 51, 51, 0.1);    
+  margin-left: 50px;
+  margin-right: 50px;
   }
 
   .search input{
     height: 40px;
     text-indent: 50px;
-    border: 2px solid #d6d4d4;
-    
+   
     
   }
+  .form-control {
+    border: 2px solid #d6d4d4;    
+    border-radius: 0;
+    width: 100%;
+  }
+  
 
 
-  .search input:focus{
+  /* .search input:focus{
    box-shadow: none;
    border: 2px solid blue;
-  }
+  } */
 
   .search .fa-search{
    position: absolute;
