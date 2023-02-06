@@ -1,6 +1,6 @@
- *{
+ /* *{
   border: 1px solid black;
-}
+} */
 body {
   
   justify-content: center;
@@ -8,17 +8,50 @@ body {
 }
 
 h2{
-  text-align: center;
-   
+  text-align: center;   
 } 
+
+.search{
+  position: relative;
+  box-shadow: 0 0 40px rgba(51, 51, 51, .1);    
+  }
+
+  .search input{
+    height: 40px;
+    text-indent: 50px;
+    border: 2px solid #d6d4d4;
+    
+    
+  }
+
+
+  .search input:focus{
+   box-shadow: none;
+   border: 2px solid blue;
+  }
+
+  .search .fa-search{
+   position: absolute;
+   top: 15px;;
+   left: 16px;
+  }
+ 
+  .search button{
+   position: absolute;
+   top: 3px;
+   right: 5px;
+   height: 40px;
+   width: 110px;
+   background: #ff8100;
+  }
  
 .cart-section{  
   justify-content: center;   
   padding: 10px;
   width: 100vh;
-  margin-inline: auto;
-  
-}
+  margin-inline: auto;  
+} 
+
 .cart-container {
     border:1px solid #E0E4CC;
     border-radius:5px;
