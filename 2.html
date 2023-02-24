@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- LightSlider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .container{
+        margin-top: 120px;
+        padding: 10px 10px;
+        background-color: lightblue;
+    }
+    .slider-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slider-indicator-item {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider-indicator-item:last-child {
+  margin-right: 0;
+}
+
+.slider-indicator-item img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+}
+
+.slider-indicator-item.active img {
+  border-color: #fff;
+  background-color: #000;
+}
+
+
+
+    .product-info {
+			margin-left: 40px;
+		}
+		.radio-container {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 10px;
+		}
+		.radio-container input[type="radio"] {
+			display: none;
+		}
+        
+
+		.radio-container label {
+			display: block;
+			border: 1px solid #333;
+			padding: 5px 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			cursor: pointer;
+			border-radius: 5px;
+			width: 100px;
+			height: 50px;
+            line-height: 35px;            
+			text-align: center;
+		}
+		.radio-container label:hover {
+			background-color: #000;
+			color: #fff;
+		}
+		.btn-primary {
+			background-color: #000;
+			border-color: #000;
+			font-size: 24px;
+			padding: 10px 20px;
+			margin-top: 20px;
+		}
+		.btn-primary:hover {
+			background-color: #000;
+			border-color: #000;
+		}
+		.btn-secondary {
+			background-color: #fff;
+			border-color: #000;
+			font-size: 24px;
+			padding: 10px 20px;
+			margin-top: 20px;
+			margin-left: 10px;
+			color: #000;
+			border: 2px solid #000;
+		}
+    /*start  media query */
+    @media only screen and (max-width: 767px) {
+        .row {
+            flex-direction: column;
+        }
+        .col-md-6 {
+            width: 100%;
+        }
+        .product-info {
+            margin-left: 0;
+        }
+    }
+    /*end of the media query */
+
+</style>
+</head>
+<body>
+    <div class="container">
+		<div class="row justify-content-center">
+         
+            <div class="col-md-6">
+                <div class="slider">
+                    <ul id="lightSlider">
+                        <li>
+                            <img src="https://picsum.photos/600/400?random=1" alt="Product Image">
+                        </li>
+                        <li>
+                            <img src="https://picsum.photos/600/400?random=2" alt="Product Image">
+                        </li>
+                        <li>
+                            <img src="https://picsum.photos/600/400?random=3" alt="Product Image">
+                        </li>
+                    </ul>
+                    <div class="slider-indicator"></div>
+
+                </div>
+            </div>
+            
+            
+			<div class="col-md-6">
+				<div class="product-info">					
+					<h1>Product Name</h1>
+                    <h2>Brand Name</h2>
+					<label for="rate">Rate:</label>
+					<select name="price" id="price">
+						<option value="10">$10</option>
+						<option value="20">$20</option>
+						<option value="30">$30</option>
+						<option value="40">$40</option>
+						<option value="50">$50</option>
+					</select>
+					<div class="radio-container">
+						<input type="radio" id="size-small" name="size" value="small" checked>
+						<label for="size-small">Small</label>
+						<input type="radio" id="size-medium" name="size" value="medium">
+						<label for="size-medium">Medium</label>
+						<input type="radio" id="size-large" name="size" value="large">
+						<label for="size-large">Large</label>
+					</div>
+					<button class="btn btn-primary">Buy Now</button>
+					<button class="btn btn-secondary">Add to Cart</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+<script>
+    $(document).ready(function() {
+  var slider = $("#lightSlider");
+  slider.lightSlider({
+    item: 1,
+    loop: true,
+    auto: true,
+    pause: 5000,
+    pager: false,
+    slideMargin: 0
+  });
+
+  // create slider indicator
+  var sliderIndicator = $(".slider-indicator");
+  slider.find("li").each(function(index) {
+    var imgSrc = $(this).find("img").attr("src");
+    sliderIndicator.append("<div class='slider-indicator-item' data-index='" + index + "'><img src='" + imgSrc + "'></div>");
+  });
+
+  // add click event to slider indicator item
+  sliderIndicator.on("click", ".slider-indicator-item", function() {
+    var index = $(this).data("index");
+    slider.goToSlide(index);
+  });
+
+  // change active indicator item when slide changes
+  slider.on("afterChange", function(event, slick, currentSlide) {
+    sliderIndicator.find(".slider-indicator-item").removeClass("active");
+    sliderIndicator.find(".slider-indicator-item[data-index='" + currentSlide + "']").addClass("active");
+  });
+});
+
+
+</script>
+</body>
+</html>
+
+
