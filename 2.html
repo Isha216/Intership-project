@@ -11,27 +11,41 @@
   <style>
     /* *{border: 1px solid black;} */
     .container {
-        margin-top: 80px;
-           
-        padding: 10px 10px;
-        background-color: lightblue;
+        margin-top: 80px;     
+       
+    }
+    .row{
+      padding: 10px 10px;
+      background-color: lightblue;
+      height: 65vh;
     }
     .card{
       margin-top: 20px;
       width: auto;
-      height: auto;
-      margin-inline: 400px;
+      height:400px;       
       border :none;
+    
     }
+  
+    .col-md-6 li{
+      max-width: 100%;
+      height: auto;
+    }
+    .col-md-6 li img {   
+      max-width: 100%;
+      max-height: 100%;  
+       
+    }         
 
   .slider-indicator {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     width: auto;
-    height: 6rem;
+    height: 50px;
     overflow: hidden;
-    background-color: goldenrod;  
+    
+     
   }
 
     .slider-indicator-item {
@@ -42,20 +56,19 @@
 
     .slider-indicator-item:last-child {
       margin-right: 0;
+      
     }
 
     .slider-indicator-item img {
-      width: 100%;
+      width: auto;
       height: 100%;
       border: 1px solid #000;
+      justify-content:center;
+      align-items: center;
     }
     .slider-indicator-item.active img {
-      border-color: #fff;
-      background-color: #000;
+      opacity: 0.5;
     }
-
-
-
     .product-info {
 			margin-left: 40px;
 		}
@@ -66,8 +79,7 @@
 		}
 		.radio-container input[type="radio"] {
 			display: none;
-		}
-        
+		}        
 
 		.radio-container label {
 			display: block;
@@ -79,7 +91,7 @@
 			border-radius: 5px;
 			width: 100px;
 			height: 50px;
-            line-height: 35px;            
+      line-height: 35px;            
 			text-align: center;
 		}
 		.radio-container label:hover {
@@ -107,8 +119,6 @@
 			color: #000;
 			border: 2px solid #000;
 		}
-    
-
    
     /*start  media query */
     @media only screen and (max-width: 600px) {
@@ -137,36 +147,19 @@
             <div class=" col-md-6" id="thumbnail-carousel">
                 <div class="slider">
                   <ul id="lightSlider">
+                  
                     <li>
-                      <img src="https://picsum.photos/600/400?random=1" alt="Product Image">
+                        <img src="testImage 1.jpg" alt="Product Image">
                     </li>
                     <li>
-                      <img src="https://picsum.photos/600/400?random=2" alt="Product Image">
+                      <img src="testImage 2.jpg" alt="Product Image">
                     </li>
                     <li>
-                        <img src="https://picsum.photos/600/400?random=3" alt="Product Image">
+                      <img src="testImage 3.jpg" alt="Product Image">
                     </li>
                     <li>
-                      <img src="https://picsum.photos/600/400?random=4" alt="Product Image">
-                    </li>
-                    <li>
-                        <img src="https://picsum.photos/600/400?random=5" alt="Product Image">
-                    </li>
-                    <li>
-                      <img src="https://picsum.photos/600/400?random=6" alt="Product Image">
-                    </li>
-                    <li>
-                      <img src="https://picsum.photos/600/400?random=7" alt="Product Image">
-                    </li>
-                    <li>
-                        <img src="https://picsum.photos/600/400?random=8" alt="Product Image">
-                    </li>
-                    <li>
-                      <img src="https://picsum.photos/600/400?random=9" alt="Product Image">
-                    </li>
-                    <li>
-                        <img src="https://picsum.photos/600/400?random=10" alt="Product Image">
-                    </li>
+                      <img src="https://fastly.picsum.photos/id/9/5000/3269.jpg?hmac=cZKbaLeduq7rNB8X-bigYO8bvPIWtT-mh8GRXtU3vPc" alt="Product Image">
+                   </li>
                     
                     </ul>
                     <div class="slider-indicator"></div>
@@ -199,17 +192,18 @@
 				</div>
 			</div>
 		</div> 
+    <div class="card mb-3 " >
+      <h5>Description</h5>
+      <p class="ml-3">This is a placeholder for Description.</p>
+        
+      <h5>Customer Reviews</h5>
+      <p class="ml-3">This is a placeholder for customer reviews.</p>
+    </div>         
            
   </div>
-<!--   
-      <div class="card mb-3 " >
-        <h5>Description</h5>
-        <p class="ml-3">This is a placeholder for Description.</p>
-          
-        <h5>Customer Reviews</h5>
-        <p class="ml-3">This is a placeholder for customer reviews.</p>
-      </div>         
- -->
+  
+     
+
 
 	
 
@@ -261,15 +255,15 @@ $(document).ready(function() {
     sliderIndicator.find(".slider-indicator-item").removeClass("active");
     sliderIndicator.find(".slider-indicator-item[data-index='" + currentSlide + "']").addClass("active");
   });
-  document.addEventListener( 'DOMContentLoaded', function () {
-  new slider-indicator( '#thumbnail-carousel', {
-		fixedWidth: 100,
-    fixedHeight: 60,
-		gap       : 10,
-		rewind    : true,
-		pagination: false,
-  } ).mount();
-} );
+//   document.addEventListener( 'DOMContentLoaded', function () {
+//   new slider-indicator( '#thumbnail-carousel', {
+// 		fixedWidth: 100,
+//     fixedHeight: 60,
+// 		gap       : 10,
+// 		rewind    : true,
+// 		pagination: false,
+//   } ).mount();
+// } );
 });
 
 </script>
