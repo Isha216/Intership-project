@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Product Page</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -26,17 +28,23 @@
       border :none;
     
     }
+    .col-md-6 {
+          flex-direction: none;
+        }
   
     .col-md-6 li{
       max-width: 100%;
       height: auto;
+      list-style: none;
     }
     .col-md-6 li img {   
       max-width: 100%;
       max-height: 100%;  
        
     }         
-
+    .product-name-top{
+      display:none;
+    }
   .slider-indicator {
     display: flex;
     justify-content: center;
@@ -44,7 +52,7 @@
     width: auto;
     height: 50px;
     overflow: hidden;
-    
+    list-style: none;
      
   }
 
@@ -122,29 +130,79 @@
    
     /*start  media query */
     @media only screen and (max-width: 600px) {
+      body{
+        width :100%;
+      }
        .container{
         margin: 0;
-        padding: 10px;
+        padding: 1%;
+        
        }
-      .row {
-          flex-direction: column;
+      .row {                 
+          display: inline-table;
+          padding : 10px;
+          height: auto;
+
         }
         .col-md-6 {
-          width: 100%;
+          width: 100vw;
+        }
+        .product-name-top {
+          display: inline-block;
+          justify-content: center;         
+          margin-top: 20px;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .product-name {
+          display: none;
+        }
+        .slider{
+          padding-top: 10px;
         }
         .product-info {
+            margin-top: 20px;
             margin-left: 0;
         }
-    }
+      
+      .slider-indicator {
+        height: auto;
+      }
+      .slider-indicator-item img {
+        height: 50px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+      .radio-container label {
+        font-size: 14px;
+        width: 80px;
+        height: 40px;
+        line-height: 25px;
+      }
+      .btn-primary, .btn-secondary {
+        font-size: 18px;
+        padding: 8px 16px;
+        margin-top: 10px;
+      }
+}   
     /* end of the media query */
 
 </style>
 </head>
 <body>
-    <div class="container">
-		<div class="row mb-3 ">
-         
-            <div class=" col-md-6" id="thumbnail-carousel">
+    <div class="container">    
+		<div class="row mb-3 ">      
+            <div class=" col-md-6 col-12" id="thumbnail-carousel">  
+              <div class="product-name-top">				
+                <h1>Product Name</h1>
+                          <h2>Brand Name</h2>
+                </div>	            
                 <div class="slider">
                   <ul id="lightSlider">
                   
@@ -167,10 +225,12 @@
             </div>
             
             
-			<div class="col-md-6 ">
-				<div class="product-info">					
+			<div class="col-md-6 col-12">
+				<div class="product-info">
+          <div class="product-name">				
 					<h1>Product Name</h1>
                     <h2>Brand Name</h2>
+          </div>	
 					<label for="rate">Rate:</label>
 					<select name="price" id="price">
 						<option value="10">$10</option>
@@ -200,9 +260,7 @@
       <p class="ml-3">This is a placeholder for customer reviews.</p>
     </div>         
            
-  </div>
-  
-     
+  </div> 
 
 
 	
