@@ -1,0 +1,147 @@
+/* Add a border to all elements */
+/* * {
+    border: 1px solid black;
+  } */
+  
+  /* Set top margin for container */
+  .container {
+    margin-top: 80px;
+  }
+  
+  /* Set padding, background color, and height for row */
+  .row {
+    padding: 10px 10px;
+    background-color: lightblue;
+    height: 65vh;
+  }
+  
+  /* Set margin top, width, height, and border for card */
+  .card {
+    margin-top: 20px;
+    width: auto;
+    height: 400px;
+    border: none;
+  }
+  
+  /* Set flex direction for col-md-6 */
+  .col-md-6 {
+    flex-direction: none;
+  }
+  
+  /* Set max width, height, and list style for col-md-6 li */
+  .col-md-6 li {
+    max-width: 100%;
+    height: auto;
+    list-style: none;
+  }
+  
+  /* Set max width and height for col-md-6 li img */
+  .col-md-6 li img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Hide product-name-top element */
+  .product-name-top {
+    display: none;
+  }
+  
+  /* Set display, justify content, margin top, width, height, overflow, and list style for slider-indicator */
+  .slider-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    list-style: none;
+  }
+  
+  /* Set margin right and cursor for slider-indicator-item */
+  .slider-indicator-item {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Set margin right to 0 for last child of slider-indicator-item */
+  .slider-indicator-item:last-child {
+    margin-right: 0;
+  }
+  
+  /* Set width, height, border, and justify content center for slider-indicator-item img */
+  .slider-indicator-item img {
+    width: auto;
+    height: 100%;
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Set opacity to 0.5 for active slider-indicator-item img */
+  .slider-indicator-item.active img {
+    opacity: 0.5;
+  }
+  
+  /* Set margin left for product-info */
+  .product-info {
+    margin-left: 40px;
+  }
+  
+  /* Set display, flex wrap, and margin top for radio-container */
+  .radio-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  /* Hide radio input */
+  .radio-container input[type="radio"] {
+    display: none;
+  }
+  
+  /* Set display block, border, padding, margin right, margin bottom, cursor, border radius, width, height, line height, and text align for radio-container label */
+  .radio-container label {
+    display: block;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    line-height: 35px;
+    text-align: center;
+  }
+  
+  /* Set background color and color for hover effect on radio-container label */
+  .radio-container label:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Set styles for primary button */
+  .btn-primary {
+    background-color: #000;
+    border-color: #000;
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #000;
+    border-color: #000;
+  }
+  
+  .btn-secondary {
+    background-color: #fff;
+    border-color: #000;
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: #000;
+    border: 2px solid #000;
+  }
+  
