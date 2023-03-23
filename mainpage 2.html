@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainpage_2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+header {
+    height: max-content;
+    transition: 0.4s;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+.jumbotron-fluid{
+    margin-bottom: 0px;
+    
+}
+.jumbotron-fluid input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    width: 450px;
+    font-size: 17px;
+    border: none;
+    
+}
+.jumbotron-fluid .search-container button { 
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.jumbotron-fluid .search-container button:hover {
+  background: #ccc;
+}
+
+.row{
+    width:auto;
+}
+.carousel{
+    height: 370px;
+    background-size: cover;
+    background-color: rgb(102, 231, 51);
+
+}
+.carousel .carousel-inner, .carousel-item{
+ height: 100%;
+}
+.carousel-inner img{
+ 
+}
+.carousel-item .row{
+    height: 100%;
+    align-items: center;
+}
+.carousel-indicators{
+    color: black;
+}
+
+.navbar {
+    position: top;
+    align-items: center;
+}
+ 
+.btn-group {    
+    margin-left: 10px;
+    
+
+}
+.btn-group .btn{
+    margin-inline: 10px;      
+    border-left: 1px solid black;
+}
+.btn-group .btn:hover{
+    font-weight: bold;
+    background-color: #ccc;
+    transition: 0.3s
+     
+}
+.row .col-md-2{
+    position: relative;
+}
+
+.row .col-md-2 .sidebar { 
+    position: static;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    color: #000000;
+    transition: all 0.3s;
+}
+.sidebar-header {
+    display: block;
+    text-align: center;
+}
+.sidebar ul{
+    max-width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    list-style: none;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+.sidebar ul li a i {
+    margin-right:  0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+/* Same dropdown links padding*/
+.sidebar ul a {
+    padding: 10px !important;
+}
+ 
+#content{
+    margin-top:250px;
+    padding:15px 15px; 
+     
+}
+
+.col-md-2 {
+    width: 240px !important;
+  background-color: #ccc;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to a new line */
+  width: 980px;
+  justify-content: center;
+}
+.sections{
+    box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+.section-name{
+    margin-left: 20px;
+    font-size: 21px;
+    font-weight: 500;
+}
+.section-name p
+{
+    margin-top: 1rem;
+}
+.card {
+  width: 220px; /* Decrease the width of the card */
+  max-width: 100%; /* Make the card responsive */
+  height: 400px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  
+}
+
+.card img {
+  height: 240px;
+}
+
+.card-body {
+  padding: 8px;
+}
+
+.card-text {
+  max-height: 200px;
+  overflow: hidden;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.card-body a{
+    margin-top: 0;
+}
+
+#view-more-button {
+  display: block;
+  margin: 0 auto;
+}
+ 
+ 
+</style>
+</head>
+<body>
+    <header>
+       <div class="jumbotron jumbotron-fluid" id="header">
+        <div class="container flex-column align-content-center">
+            <h1 class="display-4" id="logo">Fluid jumbotron</h1>
+             <div class="search-container" id="searchbar">
+                <form action="#">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </header>
+    
+    <div class="row" id="content" >
+    <div class="col-md-2">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Sidebar</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Brands</p>                
+                <li>
+                    <a href="#">Quick Heal</a>
+                </li>                      
+                <li>
+                    <a href="#">Kaspersky</a>
+                </li>
+                <li>
+                    <a href="#">eScan</a>
+                </li>
+                 <li>
+                    <a href="#">McAfee</a>
+                </li>
+            </ul>           
+            <ul class="list-unstyled components">
+                <p>Category</p>                
+                <li>
+                    <a href="#">Antivirus</a>
+                </li>                      
+                <li>
+                    <a href="#">Internet Security</a>
+                </li>
+                <li>
+                    <a href="#">Mobile Security</a>
+                </li>
+                <li>
+                    <a href="#">Server Security</a>
+                </li>                      
+            </ul>
+            </div>
+
+        </div>
+    <div class="col-md-9">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://picsum.photos/id/1/200/300" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="d-block w-100" src="https://picsum.photos/id/1/200/300" alt="Second slide">
+        </div>
+        <div class="col-md-6">
+          <h1>NEW ARRIVAL</h1>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Top Selling Product</h1>
+        </div>
+        <div class="col-md-6">
+          <img class="d-block w-100" src="..." alt="Third slide">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+               
+            <div class="navbar row ">
+                <div class="btn-group" role="group" aria-label="Basic example"><span style="border-radius: none;"></span>
+                <a type="button" class="btn">Antivirus</a> 
+                <a type="button" class="btn">Internet</a>
+                <a type="button" class="btn">Mobile</a>
+                <a type="button" class="btn">Server</a> <span style="border-radius: none;"></span>
+                </div>
+            
+    <div class="sections"> 
+        <div class="section-name">
+            <p>All Products</p>
+            <hr>
+        </div>       
+        <section class="all-products">
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+        </section> 
+        <div class="pb-2 pt-2">   
+         <button class="btn btn-primary" id="view-more-button">View more</button> 
+         </div>            
+        </div>    
+         <div class="sections"> 
+        <div class="section-name">
+            <p>Featured Products</p>
+            <hr>
+        </div>       
+        <section class="all-products">
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+        </section> 
+        <div class="pb-2 pt-2">   
+         <button class="btn btn-primary" id="view-more-button">View more</button> 
+         </div>            
+        </div>    
+         <div class="sections"> 
+        <div class="section-name">
+            <p>Top Selling Products</p>
+            <hr>
+        </div>       
+        <section class="all-products">
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="https://picsum.photos/id/1/200/300" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card tit.</p>
+                    <a href="#" class="btn btn-outline-primary">add to cart</a>
+                </div>
+            </div>           
+        </section> 
+        <div class="pb-3 pt-2">   
+         <button class="btn btn-primary" id="view-more-button">View more</button> 
+         </div>            
+        </div> 
+    </div>
+    </div>
+    
+    <footer>
+
+    </footer>
+<script>
+// When the user scrolls down 70px from the top of the document, resize the header's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+    document.getElementById("header").style.padding = "30px 10px";
+    
+    document.getElementById("header").style.display = "flex";
+    document.getElementById("logo").style.fontSize = "35px";
+    document.getElementById("logo").style.width = "50%";
+    document.getElementById("searchbar").style.float = "right";
+    
+
+  } else {
+    document.getElementById("header").style.padding = "68px 10px"
+     document.getElementById("searchbar").style.float = "left";;
+    document.getElementById("logo").style.fontSize = "59.5px";
+    document.getElementById("logo").style.fontWeight = "300";
+    document.getElementById("logo").style.margin = "0px 0px 8.5px";
+    document.getElementById("logo").style.lineHeight = "1.2";
+    document.getElementById("logo").style.fontFamily = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"';
+   
+    
+  }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>
+  
